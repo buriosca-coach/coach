@@ -1,0 +1,23 @@
+<project name="geniti" basedir="." default="copy-jars">
+	
+	<property name="workspace" value="D:/java/projects/WEB/JS/burios/v0.0.1" />
+	<property name="root" value="${workspace}/.git" />
+	<property name="geniti" value="${root}/geniti" />
+	<property name="uniql" value="${root}/burios-uniql-1.0" />
+	<property name="web" value="${root}/burios-web-1.0" />
+
+	<property name="server" value="${workspace}/.metadata/.plugins/org.eclipse.wst.server.core/tmp0" />
+	<property name="server.webapp" value="${server}/wtpwebapps" />
+	
+	<!--  -->
+	<target name="copy-jars">
+		<copy todir="${geniti}/src/main/webapp/WEB-INF/lib" overwrite="true">
+			<fileset dir="${server.webapp}/geniti/WEB-INF/lib">
+				<include name="burios-uniql-1.0.jar"/>
+				<include name="burios-web-1.0.jar"/>
+			</fileset>
+		</copy>		
+	</target>
+	
+	<!--  -->
+</project>
