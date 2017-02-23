@@ -5,7 +5,6 @@
 	<groupId>burios</groupId>
 	<artifactId>coach</artifactId>
 	<packaging>war</packaging>
-	<version>1.0</version>
 	<name>coach</name>
 
 	<properties>
